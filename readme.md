@@ -12,8 +12,8 @@ A simple guestbook application built with Flask that allows users to post commen
 
 ## Installation
 1. Download the code from Github.
-2. Install the required dependencies using `pip install -r requirements.txt`.
-3. Edit the `guestbook.html` template to match the style of your own website.
+2. Install the required dependencies using `pip install -r requirements.txt`
+3. Edit the `guestbook.html` template and `main.css` style to match the style of your own website. (They are located under templates and static/style folders)
 4. Ensure the `guests.db` file is writeable by the Flask application.
 5. Run the Flask application to start the guestbook.
 
