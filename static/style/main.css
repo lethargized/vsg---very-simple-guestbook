@@ -1,0 +1,54 @@
+body {
+  background-color: #fff;
+}
+
+.container {
+  background-color: #ff637b;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 6px #ddd;
+  width: 75%;
+  max-width: 75vw;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #000; /* Change text color to a high-contrast color for improved accessibility */
+  margin-bottom: 30px;
+}
+
+input[type="text"], textarea {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: inset 2px 4px 6px #ddd;
+}
+
+.button {
+  background-color: #ffb6c1;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+#error-message, #success-message {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-shadow: 2px 2px 2px #ddd;
+}
+
+#error-message {
+  background-color: #ffb6b6;
+  color: #f00;
+}
+
+#success-message {
+  background-color: #195419;
+  color: #0f0;
+}

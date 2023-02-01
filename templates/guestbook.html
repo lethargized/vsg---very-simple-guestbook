@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=5, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="theme-color" content="#ffb6c1">
+    <title>{{ name }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/main.css') }}">
+  </head>
+  <body>
+    <div class="container">
+              <h1>{{ name }}</h1>
+              <div id="error-message"></div>
+              <div id="success-message"></div>
+                <form action="/guestbook" method="post">
+                  <script src="{{ url_for('static', filename='js/validate.js') }}"></script>
+                  <label>name:
+                  </label>
+                  <input type="text" name="name">
+                  <br>
+                  <br>
+                  <label>homepage:
+                  </label>
+                  <input type="text" name="website">
+                  <br>
+                  <br>
+                  <label>comment:
+                  </label><br>
+                  <textarea name="comment">
+                  </textarea>
+                  <br>
+                  <br>
+                  <input type="submit" value="Submit" class="button">
+                </form>
+                <h2>guestbook entries: 
+                </h2>
+                <div class="update entries" style="height: 150px; overflow: scroll;">
+                  {% for comment in comments %}
+                  <p>
+                    <i>
+                      <a href="{{ comment[1] }}">{{ comment[0] }}
+                      </a>
+                    </i>{{ comment[3] }}
+                    <br>
+                    {{ comment[2] }}
+                    <br>
+                  </p>
+                  {% endfor %}
+    </div>
+    </div>
+  </body>
+</html>
