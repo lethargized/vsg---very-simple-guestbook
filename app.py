@@ -27,8 +27,8 @@ def read_from_file():
         lines = file.readlines()
     return [line.strip().split(";") for line in lines]
 
-# this here i a route for root, meaning the first thing that will load upon visiting 
-# domain.ext, if you want for it to be on seperate page, change both @app.route("/guestbook")
+# this here i a route for /guestbook, meaning the you'll need to navigate to domain.ext/guestbook
+# if you want for it to be on seperate page, change both @app.route("/guestbook")
 # and return redirect("/guestbook") to desired location. eg /gb.
 # don't attempt having it directly on root @app.route(/) as it tends to break on requests.
 @app.route("/guestbook", methods=["GET", "POST"])
